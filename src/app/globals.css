@@ -1,0 +1,305 @@
+/* Updated: 2025-11-01T13:23:48.631Z */
+/* Updated: 2025-11-01T13:22:06.371Z */
+/* Updated: 2025-11-01T13:17:36.750Z */
+/* Updated: 2025-11-01T12:37:58.783Z */
+/* Updated: 2025-10-28T12:01:32.540Z */
+/* Updated: 2025-10-28T09:38:19.249Z */
+/* Updated: 2025-10-28T09:05:33.321Z */
+/* Updated: 2025-10-28T08:58:28.733Z */
+/* Updated: 2025-10-28T08:41:14.753Z */
+/* Updated: 2025-10-28T08:30:06.769Z */
+/* Updated: 2025-10-28T07:48:18.087Z */
+/* Updated: 2025-10-28T02:03:30.495Z */
+/* Updated: 2025-10-28T00:33:27.201Z */
+/* Updated: 2025-10-27T14:20:45.621Z */
+/* Updated: 2025-10-27T14:03:51.490Z */
+/* Updated: 2025-10-27T11:59:33.284Z */
+/* Updated: 2025-10-27T10:22:40.551Z */
+/* Updated: 2025-10-27T10:01:06.519Z */
+/* Updated: 2025-10-06T06:50:58.658Z */
+/* Updated: 2025-10-06T02:41:57.411Z */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Shadcn/UI colors */
+  --color-background: #F5F3F0;
+  --color-foreground: #000000;
+
+  --color-card: #FFFFFF;
+  --color-card-foreground: #000000;
+
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #000000;
+
+  --color-primary: #0046CC;
+  --color-primary-foreground: #FFFFFF;
+
+  --color-secondary: #EBEBEB;
+  --color-secondary-foreground: #000000;
+
+  --color-muted: #E5E5E5;
+  --color-muted-foreground: #6B6B6B;
+
+  --color-accent: #E5E5E5;
+  --color-accent-foreground: #000000;
+
+  --color-destructive: #ef4444; /* Default red, adjust if needed */
+  --color-destructive-foreground: #FFFFFF;
+
+  --color-border: #E5E5E5;
+  --color-input: #FFFFFF;
+  --color-ring: #0046CC;
+
+  --color-chart-1: #e67e22; /* Placeholder, adjust if charts are present */
+  --color-chart-2: #2d8659;
+  --color-chart-3: #1e3a5f;
+  --color-chart-4: #f1c40f;
+  --color-chart-5: #e74c3c;
+
+  --color-sidebar: #f7f7f7; /* Not explicitly defined in design, using shadcn default */
+  --color-sidebar-foreground: #404040;
+  --color-sidebar-primary: #1a1a1a;
+  --color-sidebar-primary-foreground: #fafafa;
+  --color-sidebar-accent: #f0f0f0;
+  --color-sidebar-accent-foreground: #1a1a1a;
+  --color-sidebar-border: #d4d4d8;
+  --color-sidebar-ring: #3b82f6;
+
+  /* CoLabs specific colors */
+  --color-pure-white: #FFFFFF;
+  --color-secondary-text: #2D2D2D;
+  --color-deep-blue: #001A66;
+  --color-teal-accent: #00CCA3;
+  --color-terracotta: #B76E4E;
+  --color-olive-green: #6B7856;
+  --color-forest-green: #00594D;
+  --color-sage-green: #8A9978;
+  --color-beige-tan: #D4B896;
+  --color-charcoal: #2B2B2B;
+  --color-medium-gray: #6B6B6B;
+  --color-light-gray: #E5E5E5;
+  --color-hero-background: #DDE6F7; /* Derived from screenshot */
+  --color-hero-card-background: #F0F4F9; /* Derived from screenshot */
+  --color-hero-stat-background: #D4B896;
+  --color-hero-stat-text: #000000;
+  --color-service-card-blue: #0046CC;
+  --color-service-card-olive: #6B7856;
+  --color-service-card-terracotta: #B76E4E;
+  --color-service-card-purple: #5C4B8B; /* Derived from screenshot */
+  --color-principles-card-background: #B76E4E;
+  --color-feature-card-green: #00594D;
+  --color-feature-card-olive: #6B7856;
+  --color-article-card-background: #F0F4F9; /* Derived from screenshot */
+  --color-newsletter-background: #0046CC;
+  --color-footer-background: #2B2B2B;
+  --color-footer-text: #E5E5E5;
+
+  /* Typography */
+  --font-display: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --text-hero-h1: 80px;
+  --text-page-h1: 56px;
+  --text-h2: 48px;
+  --text-h3: 36px;
+  --text-h4: 28px;
+  --text-h5: 22px;
+  --text-body-lg: 20px;
+  --text-body: 18px;
+  --text-body-sm: 16px;
+  --text-caption: 14px;
+  --text-button: 18px;
+  --text-nav: 18px;
+  --text-stat-number: 80px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+
+  /* Shadcn/UI radius */
+  --radius-lg: 1.5rem; /* Adjusted to match 24px */
+  --radius-md: calc(1.5rem - 4px); /* Adjusted to match 20px */
+  --radius-sm: calc(1.5rem - 8px); /* Adjusted to match 16px */
+  --radius-xs: calc(1.5rem - 12px); /* Adjusted to match 12px */
+  --radius-pill: 9999px;
+
+  /* Shadcn/UI animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border);
+  }
+}
+
+@layer utilities {
+  body {
+    font-family: var(--font-body);
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  :root {
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+    --card: var(--color-card);
+    --card-foreground: var(--color-card-foreground);
+    --popover: var(--color-popover);
+    --popover-foreground: var(--color-popover-foreground);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-foreground);
+    --secondary: var(--color-secondary);
+    --secondary-foreground: var(--color-secondary-foreground);
+    --muted: var(--color-muted);
+    --muted-foreground: var(--color-muted-foreground);
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-accent-foreground);
+    --destructive: var(--color-destructive);
+    --destructive-foreground: var(--color-destructive-foreground);
+    --border: var(--color-border);
+    --input: var(--color-input);
+    --ring: var(--color-ring);
+    --chart-1: var(--color-chart-1);
+    --chart-2: var(--color-chart-2);
+    --chart-3: var(--color-chart-3);
+    --chart-4: var(--color-chart-4);
+    --chart-5: var(--color-chart-5);
+    --radius: var(--radius-lg);
+    --sidebar-background: var(--color-sidebar);
+    --sidebar-foreground: var(--color-sidebar-foreground);
+    --sidebar-primary: var(--color-sidebar-primary);
+    --sidebar-primary-foreground: var(--color-sidebar-primary-foreground);
+    --sidebar-accent: var(--color-sidebar-accent);
+    --sidebar-accent-foreground: var(--color-sidebar-accent-foreground);
+    --sidebar-border: var(--color-sidebar-border);
+    --sidebar-ring: var(--color-sidebar-ring);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--leading-normal);
+    color: var(--foreground);
+    background-color: var(--background);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--leading-snug);
+    color: var(--foreground);
+  }
+
+  h1 {
+    font-size: var(--text-page-h1);
+    line-height: var(--leading-tight);
+  }
+
+  h2 {
+    font-size: var(--text-h2);
+  }
+
+  h3 {
+    font-size: var(--text-h3);
+  }
+
+  h4 {
+    font-size: var(--text-h4);
+  }
+
+  h5 {
+    font-size: var(--text-h5);
+  }
+
+  p {
+    font-size: var(--text-body);
+    line-height: var(--leading-normal);
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px; /* Default desktop padding */
+    padding-right: 40px; /* Default desktop padding */
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
