@@ -88,12 +88,18 @@ const PrinciplesSection = () => {
                 </li>
               )}
             </ul>
-            <Link
-              href="/our-principles"
-              className="border border-[var(--color-secondary-text)] rounded-full px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 text-base sm:text-[17px] md:text-[18px] font-medium text-[var(--color-secondary-text)] hover:bg-[var(--color-secondary-text)] hover:text-[var(--color-pure-white)] transition-all duration-300 hover:scale-105 hover:shadow-lg !whitespace-pre-line">
-              Our Foundation
-
-            </Link>
+            <div className="flex flex-col gap-3 sm:gap-4 w-full">
+              <Link
+                href="/our-principles"
+                className="border border-[var(--color-secondary-text)] rounded-full px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 text-base sm:text-[17px] md:text-[18px] font-medium text-[var(--color-secondary-text)] hover:bg-[var(--color-secondary-text)] hover:text-[var(--color-pure-white)] transition-all duration-300 hover:scale-105 hover:shadow-lg text-center">
+                Our Foundation
+              </Link>
+              <Link
+                href="/leaderboard"
+                className="border border-[var(--color-primary)] rounded-full px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 text-base sm:text-[17px] md:text-[18px] font-medium text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-pure-white)] transition-all duration-300 hover:scale-105 hover:shadow-lg text-center">
+                Leaderboard
+              </Link>
+            </div>
           </div>
 
           <div className="lg:col-span-7 relative">
