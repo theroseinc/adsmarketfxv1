@@ -91,13 +91,28 @@ const PrinciplesSection = () => {
             <div className="flex flex-col gap-3 sm:gap-4 w-full">
               <Link
                 href="/our-principles"
-                className="border border-[var(--color-secondary-text)] rounded-full px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 text-base sm:text-[17px] md:text-[18px] font-medium text-[var(--color-secondary-text)] hover:bg-[var(--color-secondary-text)] hover:text-[var(--color-pure-white)] transition-all duration-300 hover:scale-105 hover:shadow-lg text-center">
-                Our Foundation
+                className="relative bg-gradient-to-r from-[var(--color-secondary-text)] to-[var(--color-charcoal)] text-[var(--color-pure-white)] rounded-[16px] px-8 sm:px-9 md:px-10 py-4 sm:py-5 md:py-6 text-lg sm:text-[19px] md:text-[20px] font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-center group overflow-hidden">
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Our Foundation
+                  <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-black to-[var(--color-secondary-text)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
               <Link
                 href="/leaderboard"
-                className="border border-[var(--color-primary)] rounded-full px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 text-base sm:text-[17px] md:text-[18px] font-medium text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-pure-white)] transition-all duration-300 hover:scale-105 hover:shadow-lg text-center">
-                Leaderboard
+                className="relative bg-gradient-to-r from-[var(--color-primary)] to-[#0052FF] text-[var(--color-pure-white)] rounded-[16px] px-8 sm:px-9 md:px-10 py-4 sm:py-5 md:py-6 text-lg sm:text-[19px] md:text-[20px] font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-center group overflow-hidden">
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                  </svg>
+                  Leaderboard
+                  <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#001A66] to-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
             </div>
           </div>
