@@ -180,7 +180,7 @@ export default function ServicesCarousel() {
                   href={service.href}
                   className="relative z-10 flex items-center justify-between cursor-pointer group"
                 >
-                  <span className="text-lg">Learn More</span>
+                  <span className="text-lg" style={{ color: service.color }}>Learn More</span>
                   <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                     <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
                       <path
