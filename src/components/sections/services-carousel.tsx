@@ -208,13 +208,14 @@ export default function ServicesCarousel() {
                 href={service.href}
                 className="relative z-10 flex items-center justify-between cursor-pointer group">
 
-                  <span className="text-sm sm:text-base md:text-lg" style={{ color: service.color }}>Learn More</span>
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                    <svg width="12" height="12" viewBox="0 0 15 14" fill="none" className="sm:w-[14px] sm:h-[13px] md:w-[15px] md:h-[14px]">
+                  <span className="text-sm sm:text-base md:text-lg font-medium" style={{ color: service.color }}>Learn More</span>
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg shadow-md">
+                    <svg width="16" height="16" viewBox="0 0 15 14" fill="none" className="sm:w-[18px] sm:h-[18px] md:w-[20px] md:h-[20px]">
                       <path
                       d="M1.38672 12.5L13.6133 1.5M13.6133 1.5V11.1M13.6133 1.5H3.01328"
-                      stroke="white"
-                      strokeWidth="2" />
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      className="text-black" />
 
                     </svg>
                   </div>

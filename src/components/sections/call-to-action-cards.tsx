@@ -38,8 +38,8 @@ const CallToActionCards = () => {
               </div>
 
               <div className="relative z-10 self-end" tabIndex={0}>
-                <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center text-white shadow-lg">
-                  <ArrowRight className="w-6 h-6" aria-hidden="true" />
+                <div className="w-16 h-16 bg-white hover:bg-white/90 rounded-2xl flex items-center justify-center text-black shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl">
+                  <ArrowRight className="w-7 h-7" aria-hidden="true" strokeWidth={2.5} />
                 </div>
               </div>
             </Link>
@@ -70,8 +70,8 @@ const CallToActionCards = () => {
                 </div>
 
                 <div className="relative z-20 self-end" tabIndex={0}>
-                  <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center text-white shadow-lg">
-                    <ArrowRight className="w-6 h-6" aria-hidden="true" />
+                  <div className="w-16 h-16 bg-white hover:bg-white/90 rounded-2xl flex items-center justify-center text-black shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl">
+                    <ArrowRight className="w-7 h-7" aria-hidden="true" strokeWidth={2.5} />
                   </div>
                 </div>
               </Link>
@@ -100,8 +100,8 @@ const CallToActionCards = () => {
                 </div>
 
                 <div className="relative z-20 self-end" tabIndex={0}>
-                  <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center text-white shadow-lg">
-                    <ArrowRight className="w-6 h-6" aria-hidden="true" />
+                  <div className="w-16 h-16 bg-white hover:bg-white/90 rounded-2xl flex items-center justify-center text-black shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl">
+                    <ArrowRight className="w-7 h-7" aria-hidden="true" strokeWidth={2.5} />
                   </div>
                 </div>
               </Link>
