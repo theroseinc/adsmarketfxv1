@@ -54,7 +54,7 @@ const PrinciplesSection = () => {
     <section className="bg-background py-16 sm:py-20 md:py-24 lg:py-28">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-x-16 items-center">
-          <div className="lg:col-span-5 flex flex-col items-start gap-8 sm:gap-10 lg:gap-12">
+          <div className="lg:col-span-5 flex flex-col items-start gap-8 sm:gap-10 lg:gap-12 order-1">
             <ul className="grid grid-cols-2 gap-3 sm:gap-4 w-full">
               {principlesData.map((item, index) =>
               <li key={index}>
@@ -88,7 +88,7 @@ const PrinciplesSection = () => {
                 </li>
               )}
             </ul>
-            <div className="flex flex-col gap-3 sm:gap-4 w-full">
+            <div className="hidden lg:flex flex-col gap-3 sm:gap-4 w-full">
               <Link
                 href="/our-principles"
                 className="relative bg-gradient-to-r from-[var(--color-secondary-text)] to-[var(--color-charcoal)] text-[var(--color-pure-white)] rounded-[16px] px-8 sm:px-9 md:px-10 py-4 sm:py-5 md:py-6 text-lg sm:text-[19px] md:text-[20px] font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-center group overflow-hidden">
@@ -117,7 +117,7 @@ const PrinciplesSection = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-7 relative">
+          <div className="lg:col-span-7 relative order-2">
             <div className="relative" style={{ perspective: '1200px' }}>
               <AnimatePresence mode="popLayout" initial={false} custom={direction}>
                 <motion.div
@@ -229,6 +229,34 @@ const PrinciplesSection = () => {
                 })}
               </div>
             </div>
+          </div>
+
+          <div className="lg:hidden flex flex-col gap-3 sm:gap-4 w-full order-3">
+            <Link
+              href="/our-principles"
+              className="relative bg-gradient-to-r from-[var(--color-secondary-text)] to-[var(--color-charcoal)] text-[var(--color-pure-white)] rounded-[16px] px-8 sm:px-9 md:px-10 py-4 sm:py-5 md:py-6 text-lg sm:text-[19px] md:text-[20px] font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-center group overflow-hidden">
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Our Foundation
+                <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-black to-[var(--color-secondary-text)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </Link>
+            <Link
+              href="/leaderboard"
+              className="relative bg-gradient-to-r from-[var(--color-primary)] to-[#0052FF] text-[var(--color-pure-white)] rounded-[16px] px-8 sm:px-9 md:px-10 py-4 sm:py-5 md:py-6 text-lg sm:text-[19px] md:text-[20px] font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-center group overflow-hidden">
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                </svg>
+                Leaderboard
+                <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#001A66] to-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </Link>
           </div>
         </div>
       </div>
