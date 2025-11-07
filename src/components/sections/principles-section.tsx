@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const principlesData = [
 {
-  title: "Dual-Traffic Ecosystem",
+  title: "Traffic",
   heading: "Dual-Traffic Ecosystem",
   description: "Where elite affiliates meet battle-tested media buyers. We've cracked the code on blending organic partnerships with laser-focused paid acquisition. The result? Traffic that converts at scale while maintaining pristine quality standards your brand deserves.",
   image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/03717330-1ca2-4a48-a77e-4f44e386c500/generated_images/explosive-3d-abstract-visualization-of-d-8ded53e7-20251028055744.jpg",
@@ -15,7 +15,7 @@ const principlesData = [
   color: "#B76E4E" // Terracotta
 },
 {
-  title: "Data-Driven Performance",
+  title: "Performance",
   heading: "Data-Driven Performance",
   description: "Algorithms that think faster than markets move. Our AI-powered optimization engine dissects every click, scroll, and conversion in real-time—automatically shifting budgets to winning campaigns while killing underperformers before they drain your ROI.",
   image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/03717330-1ca2-4a48-a77e-4f44e386c500/generated_images/mind-bending-data-visualization-showing--67705e7a-20251028055742.jpg",
@@ -23,7 +23,7 @@ const principlesData = [
   color: "#0046CC" // Primary Blue
 },
 {
-  title: "Partner Empowerment",
+  title: "Empowerment",
   heading: "Empowering Affiliates & Advertisers",
   description: "We don't just pay you—we arm you with weapons. Exclusive offers, white-glove support, and payouts that actually arrive on time. Join a network where top performers get VIP treatment, custom funnels, and the kind of intel that separates six-figure months from seven-figure years.",
   image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/03717330-1ca2-4a48-a77e-4f44e386c500/generated_images/stunning-abstract-representation-of-part-e437a0f4-20251028055745.jpg",
@@ -31,7 +31,7 @@ const principlesData = [
   color: "#00594D" // Forest Green
 },
 {
-  title: "Premium Traffic at Scale",
+  title: "Scale",
   heading: "Premium Traffic at Scale",
   description: "Flood your funnels with traffic that actually clicks Buy. We tap tier-1 GEOs across native, display, push, and pop—delivering millions of qualified eyeballs daily. Every visitor pre-filtered through military-grade fraud detection. Quality meets volume. Finally.",
   image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/03717330-1ca2-4a48-a77e-4f44e386c500/generated_images/epic-global-traffic-network-visualizatio-577e9d21-20251028055747.jpg",

@@ -6,28 +6,28 @@ import { useRef, useEffect, useState } from "react";
 
 const services = [
   {
-    title: "Vetted Affiliate Network",
+    title: "Network",
     description: "Pre-screened partners with proven track records",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/832c9922-9a59-4cd0-b307-ceca8115c4e1/generated_images/affiliate-network-connections%2c-glowing-c8d92b94-20251014165832.jpg",
     color: "#6B7C4A",
     href: "/services/affiliate-management",
   },
   {
-    title: "In-House Media Buying",
+    title: "Media",
     description: "Expert campaign management and optimization",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/832c9922-9a59-4cd0-b307-ceca8115c4e1/generated_images/media-buying-advertising-platforms%2c-vi-454e4ff7-20251014165847.jpg",
     color: "#0047FF",
     href: "/services/media-buying",
   },
   {
-    title: "Premium CPA Offers",
+    title: "Offers",
     description: "High-converting campaigns in crypto, forex & DeFi",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/832c9922-9a59-4cd0-b307-ceca8115c4e1/generated_images/cryptocurrency-cpa-campaigns-visualizati-15560793-20251014165822.jpg",
     color: "#B5663D",
     href: "/services/cpa-campaigns",
   },
   {
-    title: "Real-Time Analytics",
+    title: "Analytics",
     description: "Track performance with advanced reporting tools",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/832c9922-9a59-4cd0-b307-ceca8115c4e1/generated_images/campaign-optimization-analytics%2c-periw-f68b8b63-20251014165838.jpg",
     color: "#6B7BC4",
