@@ -41,10 +41,33 @@ export default function ServicesCarousel() {
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
   const autoRotateRef = useRef<NodeJS.Timeout | null>(null);
   const touchStartXRef = useRef(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const totalItems = services.length;
-  const radius = 600;
+
+  // Responsive radius based on screen size
+  const getRadius = () => {
+    if (typeof window === 'undefined') return 600;
+    const width = window.innerWidth;
+    if (width < 640) return 280; // Mobile
+    if (width < 1024) return 450; // Tablet
+    return 600; // Desktop
+  };
+
+  const [radius, setRadius] = useState(getRadius());
   const theta = 360 / totalItems;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setRadius(getRadius());
+      setIsMobile(window.innerWidth < 640);
+      rotateCarousel(currentIndex);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [currentIndex]);
 
   const rotateCarousel = (index: number) => {
     const angle = theta * index;
@@ -102,7 +125,7 @@ export default function ServicesCarousel() {
 
   useEffect(() => {
     rotateCarousel(currentIndex);
-  }, [currentIndex]);
+  }, [currentIndex, radius]);
 
   useEffect(() => {
     // Initialize carousel
@@ -134,11 +157,16 @@ export default function ServicesCarousel() {
   };
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-24 bg-[#FFFEF9] overflow-hidden">
-      <div className="relative w-full h-[100vh] flex items-center justify-center" style={{ perspective: "1200px" }}>
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-[#FFFEF9] overflow-hidden">
+      <div 
+        className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-[100vh] flex items-center justify-center px-4 sm:px-6" 
+        style={{ 
+          perspective: isMobile ? "800px" : "1200px" 
+        }}
+      >
         <div
           ref={carouselRef}
-          className="relative w-[480px] h-[320px] transition-transform duration-1000 ease-in-out"
+          className="relative w-full max-w-[320px] h-[240px] sm:max-w-[380px] sm:h-[280px] md:max-w-[440px] md:h-[300px] lg:max-w-[480px] lg:h-[320px] transition-transform duration-1000 ease-in-out"
           style={{ transformStyle: "preserve-3d" }}
           onMouseEnter={stopAutoRotate}
           onMouseLeave={startAutoRotate}
@@ -149,20 +177,20 @@ export default function ServicesCarousel() {
             <div
               key={service.title}
               ref={(el) => (itemsRef.current[index] = el)}
-              className="absolute left-0 top-0 w-[480px] h-[320px] rounded-[32px] overflow-hidden transition-all duration-[600ms] ease-in-out cursor-pointer"
+              className="absolute left-0 top-0 w-full max-w-[320px] h-[240px] sm:max-w-[380px] sm:h-[280px] md:max-w-[440px] md:h-[300px] lg:max-w-[480px] lg:h-[320px] rounded-[20px] sm:rounded-[24px] md:rounded-[28px] lg:rounded-[32px] overflow-hidden transition-all duration-[600ms] ease-in-out cursor-pointer"
             >
               <div
-                className="w-full h-full p-10 flex flex-col justify-between relative text-white transition-transform duration-300 hover:scale-[1.02]"
+                className="w-full h-full p-6 sm:p-8 md:p-9 lg:p-10 flex flex-col justify-between relative text-white transition-transform duration-300 hover:scale-[1.02]"
                 style={{ backgroundColor: service.color }}
               >
-                <div className="absolute top-0 right-0 w-[280px] h-[280px] rounded-bl-full rounded-tr-[32px] overflow-hidden">
+                <div className="absolute top-0 right-0 w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] lg:w-[280px] lg:h-[280px] rounded-bl-full rounded-tr-[20px] sm:rounded-tr-[24px] md:rounded-tr-[28px] lg:rounded-tr-[32px] overflow-hidden">
                   <Image
                     alt={service.title}
                     loading="lazy"
                     decoding="async"
                     fill
                     className="transition-all duration-700 ease-out hover:brightness-110 object-cover"
-                    sizes="280px"
+                    sizes="(max-width: 640px) 180px, (max-width: 768px) 220px, (max-width: 1024px) 250px, 280px"
                     src={service.image}
                   />
                   <div
@@ -170,19 +198,19 @@ export default function ServicesCarousel() {
                     style={{ backgroundColor: service.color }}
                   />
                 </div>
-                <div className="relative z-10 w-3/5">
-                  <h4 className="text-[32px] font-semibold leading-tight mb-2">
+                <div className="relative z-10 w-full sm:w-3/5 md:w-3/5">
+                  <h4 className="text-[22px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-semibold leading-tight mb-1 sm:mb-2">
                     {service.title}
                   </h4>
-                  <p className="text-sm opacity-80">{service.description}</p>
+                  <p className="text-xs sm:text-sm opacity-80">{service.description}</p>
                 </div>
                 <Link
                   href={service.href}
                   className="relative z-10 flex items-center justify-between cursor-pointer group"
                 >
-                  <span className="text-lg" style={{ color: service.color }}>Learn More</span>
-                  <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                  <span className="text-sm sm:text-base md:text-lg" style={{ color: service.color }}>Learn More</span>
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                    <svg width="12" height="12" viewBox="0 0 15 14" fill="none" className="sm:w-[14px] sm:h-[13px] md:w-[15px] md:h-[14px]">
                       <path
                         d="M1.38672 12.5L13.6133 1.5M13.6133 1.5V11.1M13.6133 1.5H3.01328"
                         stroke="white"
@@ -197,17 +225,17 @@ export default function ServicesCarousel() {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-5 z-50">
+      <div className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex gap-3 sm:gap-4 md:gap-5 z-50">
         <button
           onClick={prev}
-          className="w-[50px] h-[50px] rounded-full bg-white/20 backdrop-blur-[10px] border-2 border-white/30 text-white text-2xl cursor-pointer transition-all duration-300 hover:bg-white/30 hover:scale-110 flex items-center justify-center"
+          className="w-[44px] h-[44px] sm:w-[48px] sm:h-[48px] md:w-[50px] md:h-[50px] rounded-full bg-white/20 backdrop-blur-[10px] border-2 border-white/30 text-white text-xl sm:text-2xl cursor-pointer transition-all duration-300 hover:bg-white/30 hover:scale-110 flex items-center justify-center"
           aria-label="Previous service"
         >
           ‹
         </button>
         <button
           onClick={next}
-          className="w-[50px] h-[50px] rounded-full bg-white/20 backdrop-blur-[10px] border-2 border-white/30 text-white text-2xl cursor-pointer transition-all duration-300 hover:bg-white/30 hover:scale-110 flex items-center justify-center"
+          className="w-[44px] h-[44px] sm:w-[48px] sm:h-[48px] md:w-[50px] md:h-[50px] rounded-full bg-white/20 backdrop-blur-[10px] border-2 border-white/30 text-white text-xl sm:text-2xl cursor-pointer transition-all duration-300 hover:bg-white/30 hover:scale-110 flex items-center justify-center"
           aria-label="Next service"
         >
           ›
