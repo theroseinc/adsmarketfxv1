@@ -55,7 +55,7 @@ const PrinciplesSection = () => {
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-x-16 items-center">
           <div className="lg:col-span-5 flex flex-col items-start gap-8 sm:gap-10 lg:gap-12">
-            <ul className="flex flex-col gap-3 sm:gap-4 w-full">
+            <ul className="grid grid-cols-2 gap-3 sm:gap-4 w-full">
               {principlesData.map((item, index) =>
               <li key={index}>
                   <motion.button
