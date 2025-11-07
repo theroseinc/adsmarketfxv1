@@ -47,11 +47,11 @@ export default function ServicesCarousel() {
 
   // Responsive radius based on screen size
   const getRadius = () => {
-    if (typeof window === 'undefined') return 600;
+    if (typeof window === 'undefined') return 420;
     const width = window.innerWidth;
-    if (width < 640) return 280; // Mobile
-    if (width < 1024) return 450; // Tablet
-    return 600; // Desktop
+    if (width < 640) return 196; // Mobile (280 * 0.7)
+    if (width < 1024) return 315; // Tablet (450 * 0.7)
+    return 420; // Desktop (600 * 0.7)
   };
 
   const [radius, setRadius] = useState(getRadius());
@@ -166,7 +166,7 @@ export default function ServicesCarousel() {
       >
         <div
           ref={carouselRef}
-          className="relative w-full max-w-[320px] h-[240px] sm:max-w-[380px] sm:h-[280px] md:max-w-[440px] md:h-[300px] lg:max-w-[480px] lg:h-[320px] transition-transform duration-1000 ease-in-out"
+          className="relative w-full max-w-[224px] h-[168px] sm:max-w-[266px] sm:h-[196px] md:max-w-[308px] md:h-[210px] lg:max-w-[336px] lg:h-[224px] transition-transform duration-1000 ease-in-out"
           style={{ transformStyle: "preserve-3d" }}
           onMouseEnter={stopAutoRotate}
           onMouseLeave={startAutoRotate}
@@ -177,13 +177,13 @@ export default function ServicesCarousel() {
             <div
               key={service.title}
               ref={(el) => (itemsRef.current[index] = el)}
-              className="absolute left-0 top-0 w-full max-w-[320px] h-[240px] sm:max-w-[380px] sm:h-[280px] md:max-w-[440px] md:h-[300px] lg:max-w-[480px] lg:h-[320px] rounded-[20px] sm:rounded-[24px] md:rounded-[28px] lg:rounded-[32px] overflow-hidden transition-all duration-[600ms] ease-in-out cursor-pointer"
+              className="absolute left-0 top-0 w-full max-w-[224px] h-[168px] sm:max-w-[266px] sm:h-[196px] md:max-w-[308px] md:h-[210px] lg:max-w-[336px] lg:h-[224px] rounded-[20px] sm:rounded-[24px] md:rounded-[28px] lg:rounded-[32px] overflow-hidden transition-all duration-[600ms] ease-in-out cursor-pointer"
             >
               <div
                 className="w-full h-full p-6 sm:p-8 md:p-9 lg:p-10 flex flex-col justify-between relative text-white transition-transform duration-300 hover:scale-[1.02]"
                 style={{ backgroundColor: service.color }}
               >
-                <div className="absolute top-0 right-0 w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] lg:w-[280px] lg:h-[280px] rounded-bl-full rounded-tr-[20px] sm:rounded-tr-[24px] md:rounded-tr-[28px] lg:rounded-tr-[32px] overflow-hidden">
+                <div className="absolute top-0 right-0 w-[126px] h-[126px] sm:w-[154px] sm:h-[154px] md:w-[175px] md:h-[175px] lg:w-[196px] lg:h-[196px] rounded-bl-full rounded-tr-[20px] sm:rounded-tr-[24px] md:rounded-tr-[28px] lg:rounded-tr-[32px] overflow-hidden">
                   <Image
                     alt={service.title}
                     loading="lazy"
