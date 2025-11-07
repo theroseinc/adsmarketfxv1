@@ -134,7 +134,7 @@ export default function ServicesCarousel() {
   };
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-[#667eea] to-[#764ba2] overflow-hidden">
+    <section className="relative py-16 sm:py-20 md:py-24 bg-[#FFFEF9] overflow-hidden">
       <div className="relative w-full h-[100vh] flex items-center justify-center" style={{ perspective: "1200px" }}>
         <div
           ref={carouselRef}
