@@ -157,9 +157,9 @@ export default function ServicesCarousel() {
   };
 
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-[#FFFEF9] overflow-hidden !w-[64.1%] !h-[576px]">
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-[#FFFEF9] overflow-hidden !w-[64.1%] !h-[614px]">
       <div
-        className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-[100vh] flex items-center justify-center px-4 sm:px-6"
+        className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] flex items-center justify-center px-4 sm:px-6 !w-[1773px] xl:!h-[605px]"
         style={{
           perspective: isMobile ? "800px" : "1200px"
         }}>
