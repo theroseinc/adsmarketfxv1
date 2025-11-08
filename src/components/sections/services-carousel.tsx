@@ -157,16 +157,16 @@ export default function ServicesCarousel() {
   };
 
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-[#FFFEF9] overflow-hidden !w-[64.1%] !h-[614px]">
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-[#FFFEF9] overflow-hidden w-full">
       <div
-        className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] flex items-center justify-center px-4 sm:px-6 !w-[1773px] xl:!h-[605px]"
+        className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[70vh] xl:h-[75vh] flex items-center justify-center px-4 sm:px-6 w-full max-w-7xl mx-auto"
         style={{
           perspective: isMobile ? "800px" : "1200px"
         }}>
 
         <div
           ref={carouselRef}
-          className="relative w-full max-w-[320px] h-[240px] sm:max-w-[380px] sm:h-[280px] md:max-w-[440px] md:h-[300px] lg:max-w-[480px] lg:h-[320px] transition-transform duration-1000 ease-in-out"
+          className="relative w-full max-w-[280px] h-[210px] sm:max-w-[320px] sm:h-[240px] md:max-w-[380px] md:h-[280px] lg:max-w-[440px] lg:h-[320px] xl:max-w-[480px] xl:h-[340px] transition-transform duration-1000 ease-in-out"
           style={{ transformStyle: "preserve-3d" }}
           onMouseEnter={stopAutoRotate}
           onMouseLeave={startAutoRotate}
@@ -177,20 +177,20 @@ export default function ServicesCarousel() {
           <div
             key={service.title}
             ref={(el) => itemsRef.current[index] = el}
-            className="absolute left-0 top-0 w-full max-w-[320px] h-[240px] sm:max-w-[380px] sm:h-[280px] md:max-w-[440px] md:h-[300px] lg:max-w-[480px] lg:h-[320px] rounded-[20px] sm:rounded-[24px] md:rounded-[28px] lg:rounded-[32px] overflow-hidden transition-all duration-[600ms] ease-in-out cursor-pointer">
+            className="absolute left-0 top-0 w-full max-w-[280px] h-[210px] sm:max-w-[320px] sm:h-[240px] md:max-w-[380px] md:h-[280px] lg:max-w-[440px] lg:h-[320px] xl:max-w-[480px] xl:h-[340px] rounded-[18px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] overflow-hidden transition-all duration-[600ms] ease-in-out cursor-pointer">
 
               <div
-              className="w-full h-full p-6 sm:p-8 md:p-9 lg:p-10 flex flex-col justify-between relative text-white transition-transform duration-300 hover:scale-[1.02]"
+              className="w-full h-full p-5 sm:p-6 md:p-8 lg:p-9 xl:p-10 flex flex-col justify-between relative text-white transition-transform duration-300 hover:scale-[1.02]"
               style={{ backgroundColor: service.color }}>
 
-                <div className="absolute top-0 right-0 w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] lg:w-[280px] lg:h-[280px] rounded-bl-full rounded-tr-[20px] sm:rounded-tr-[24px] md:rounded-tr-[28px] lg:rounded-tr-[32px] overflow-hidden">
+                <div className="absolute top-0 right-0 w-[140px] h-[140px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] lg:w-[240px] lg:h-[240px] xl:w-[280px] xl:h-[280px] rounded-bl-full rounded-tr-[18px] sm:rounded-tr-[20px] md:rounded-tr-[24px] lg:rounded-tr-[28px] overflow-hidden">
                   <Image
                   alt={service.title}
                   loading="lazy"
                   decoding="async"
                   fill
                   className="transition-all duration-700 ease-out hover:brightness-110 object-cover"
-                  sizes="(max-width: 640px) 180px, (max-width: 768px) 220px, (max-width: 1024px) 250px, 280px"
+                  sizes="(max-width: 640px) 140px, (max-width: 768px) 160px, (max-width: 1024px) 200px, (max-width: 1280px) 240px, 280px"
                   src={service.image} />
 
                   <div
@@ -199,10 +199,10 @@ export default function ServicesCarousel() {
 
                 </div>
                 <div className="relative z-10 w-full sm:w-3/5 md:w-3/5">
-                  <h4 className="text-[22px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-semibold leading-tight mb-1 sm:mb-2">
+                  <h4 className="text-[20px] sm:text-[22px] md:text-[26px] lg:text-[28px] xl:text-[32px] font-semibold leading-tight mb-1 sm:mb-2">
                     {service.title}
                   </h4>
-                  <p className="text-xs sm:text-sm opacity-80">{service.description}</p>
+                  <p className="text-[11px] sm:text-xs md:text-sm opacity-80">{service.description}</p>
                 </div>
                 <Link
                 href={service.href}
