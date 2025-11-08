@@ -68,37 +68,8 @@ const PrinciplesSection = () => {
                 className="absolute top-[2px] left-[2px] w-[108px] sm:w-[128px] h-[36px] sm:h-[40px] bg-[#ffeba7] rounded-sm z-[-1] transition-all duration-300"
                 style={{ left: flipped ? 'calc(100% - 110px)' : '2px' }}
               />
-              <span className="block mix-blend-difference">
-                {currentFeature.title}
-                <span className="float-right">{nextFeature.title}</span>
-              </span>
             </label>
           </div>
-        </div>
-
-        {/* Tab Buttons */}
-        <div className="flex justify-center gap-2 sm:gap-3 mb-12 sm:mb-14 md:mb-16 flex-wrap">
-          {principlesData.map((feature, index) => (
-            <button
-              key={feature.title}
-              onClick={() => {
-                setActiveTab(index);
-                setFlipped(false);
-              }}
-              className={`px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 ${
-                activeTab === index
-                  ? 'text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-600 hover:shadow-md border border-[var(--color-border)]'
-              }`}
-              style={
-                activeTab === index
-                  ? { backgroundColor: feature.color }
-                  : {}
-              }
-            >
-              {feature.title}
-            </button>
-          ))}
         </div>
 
         {/* 3D Card Container */}
