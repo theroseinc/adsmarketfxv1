@@ -7,11 +7,11 @@ const CallToActionCards = () => {
   return (
     <section className="bg-background py-20 lg:py-24">
       <div className="container">
-        <h2 className="text-4xl font-normal text-gray-400 mb-10">
+        <h2 className="text-4xl font-normal text-white mb-10">
           Why Partner With ADSMARKETFX
         </h2>
-        <p className="text-lg text-gray-400 max-w-3xl mb-12">
-          Premium Traffic Guarantee. Daily Payments. Dedicated Support. We deliver results that matter—backed by real partnerships, not just promises.
+        <p className="text-lg text-white max-w-3xl mb-12">
+          Premium Traffic Guarantee. Weekly Payments. Dedicated Support. We deliver results that matter—backed by real partnerships, not just promises.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -38,8 +38,8 @@ const CallToActionCards = () => {
               </div>
 
               <div className="relative z-10 self-end" tabIndex={0}>
-                <div className="w-16 h-16 bg-white hover:bg-white/90 rounded-2xl flex items-center justify-center text-black shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl">
-                  <ArrowRight className="w-7 h-7" aria-hidden="true" strokeWidth={2.5} />
+                <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center text-white shadow-lg">
+                  <ArrowRight className="w-6 h-6" aria-hidden="true" />
                 </div>
               </div>
             </Link>
@@ -70,8 +70,8 @@ const CallToActionCards = () => {
                 </div>
 
                 <div className="relative z-20 self-end" tabIndex={0}>
-                  <div className="w-16 h-16 bg-white hover:bg-white/90 rounded-2xl flex items-center justify-center text-black shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl">
-                    <ArrowRight className="w-7 h-7" aria-hidden="true" strokeWidth={2.5} />
+                  <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center text-white shadow-lg">
+                    <ArrowRight className="w-6 h-6" aria-hidden="true" />
                   </div>
                 </div>
               </Link>
@@ -100,8 +100,8 @@ const CallToActionCards = () => {
                 </div>
 
                 <div className="relative z-20 self-end" tabIndex={0}>
-                  <div className="w-16 h-16 bg-white hover:bg-white/90 rounded-2xl flex items-center justify-center text-black shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl">
-                    <ArrowRight className="w-7 h-7" aria-hidden="true" strokeWidth={2.5} />
+                  <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center text-white shadow-lg">
+                    <ArrowRight className="w-6 h-6" aria-hidden="true" />
                   </div>
                 </div>
               </Link>

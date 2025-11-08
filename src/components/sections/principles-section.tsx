@@ -54,7 +54,7 @@ const PrinciplesSection = () => {
     <section className="bg-background py-16 sm:py-20 md:py-24 lg:py-28">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-x-16 items-center">
-          <div className="lg:col-span-5 flex flex-col items-start gap-8 sm:gap-10 lg:gap-12 order-1">
+          <div className="lg:col-span-5 flex flex-col items-start gap-8 sm:gap-10 lg:gap-12">
             <ul className="grid grid-cols-2 gap-3 sm:gap-4 w-full">
               {principlesData.map((item, index) =>
               <li key={index}>
@@ -88,70 +88,36 @@ const PrinciplesSection = () => {
                 </li>
               )}
             </ul>
-            <div className="hidden lg:flex flex-col gap-4 w-full">
-              {/* Our Foundation Card */}
-              <Link href="/our-principles" className="block group">
-                <article className="relative bg-[var(--color-pure-white)] rounded-[20px] overflow-hidden border border-[var(--color-border)] hover:shadow-xl transition-all duration-300">
-                  <div className="flex items-center gap-4 p-5">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-secondary-text)] flex-shrink-0" />
-                    <div className="relative w-16 h-16 rounded-[12px] overflow-hidden flex-shrink-0 bg-gradient-to-br from-[var(--color-terracotta)] to-[var(--color-olive-green)]">
-                      <Image
-                        src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/03717330-1ca2-4a48-a77e-4f44e386c500-colabs-com-au/assets/images/next-244901-M49EM8-scaled.jpg?"
-                        alt="Our Foundation"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-[14px] font-medium text-[var(--color-medium-gray)]">Foundation</span>
-                      </div>
-                      <h3 className="text-[18px] font-semibold text-[var(--color-foreground)] flex items-center justify-between group-hover:text-[var(--color-primary)] transition-colors">
-                        Our Foundation
-                        <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </h3>
-                    </div>
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-secondary-text)] flex-shrink-0" />
-                  </div>
-                </article>
+            <div className="flex flex-col gap-3 sm:gap-4 w-full">
+              <Link
+                href="/our-principles"
+                className="relative bg-gradient-to-r from-[var(--color-secondary-text)] to-[var(--color-charcoal)] text-[var(--color-pure-white)] rounded-[16px] px-8 sm:px-9 md:px-10 py-4 sm:py-5 md:py-6 text-lg sm:text-[19px] md:text-[20px] font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-center group overflow-hidden">
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Our Foundation
+                  <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-black to-[var(--color-secondary-text)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
-
-              {/* Leaderboard Card */}
-              <Link href="/leaderboard" className="block group">
-                <article className="relative bg-[var(--color-pure-white)] rounded-[20px] overflow-hidden border border-[var(--color-border)] hover:shadow-xl transition-all duration-300">
-                  <div className="flex items-center gap-4 p-5">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-primary)] flex-shrink-0" />
-                    <div className="relative w-16 h-16 rounded-[12px] overflow-hidden flex-shrink-0 bg-gradient-to-br from-[var(--color-primary)] to-[#0052FF] flex items-center justify-center">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                      </svg>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-[14px] font-medium text-[var(--color-medium-gray)] flex items-center gap-1">
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                          </svg>
-                          Rankings
-                        </span>
-                      </div>
-                      <h3 className="text-[18px] font-semibold text-[var(--color-foreground)] flex items-center justify-between group-hover:text-[var(--color-primary)] transition-colors">
-                        Leaderboard
-                        <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </h3>
-                    </div>
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-primary)] flex-shrink-0" />
-                  </div>
-                </article>
+              <Link
+                href="/leaderboard"
+                className="relative bg-gradient-to-r from-[var(--color-primary)] to-[#0052FF] text-[var(--color-pure-white)] rounded-[16px] px-8 sm:px-9 md:px-10 py-4 sm:py-5 md:py-6 text-lg sm:text-[19px] md:text-[20px] font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-center group overflow-hidden">
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                  </svg>
+                  Leaderboard
+                  <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#001A66] to-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
             </div>
           </div>
 
-          <div className="lg:col-span-7 relative order-2">
+          <div className="lg:col-span-7 relative">
             <div className="relative" style={{ perspective: '1200px' }}>
               <AnimatePresence mode="popLayout" initial={false} custom={direction}>
                 <motion.div
@@ -233,6 +199,7 @@ const PrinciplesSection = () => {
                 </motion.div>
               </AnimatePresence>
 
+              {/* Background stacked cards for depth effect */}
               <div className="absolute inset-0 -z-10">
                 {principlesData.map((item, index) => {
                   if (index === selectedIndex) return null;
@@ -262,68 +229,6 @@ const PrinciplesSection = () => {
                 })}
               </div>
             </div>
-          </div>
-
-          <div className="lg:hidden flex flex-col gap-4 w-full order-3">
-            {/* Our Foundation Card - Mobile */}
-            <Link href="/our-principles" className="block group">
-              <article className="relative bg-[var(--color-pure-white)] rounded-[20px] overflow-hidden border border-[var(--color-border)] hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center gap-4 p-5">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-secondary-text)] flex-shrink-0" />
-                  <div className="relative w-16 h-16 rounded-[12px] overflow-hidden flex-shrink-0 bg-gradient-to-br from-[var(--color-terracotta)] to-[var(--color-olive-green)]">
-                    <Image
-                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/03717330-1ca2-4a48-a77e-4f44e386c500-colabs-com-au/assets/images/next-244901-M49EM8-scaled.jpg?"
-                      alt="Our Foundation"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-[14px] font-medium text-[var(--color-medium-gray)]">Foundation</span>
-                    </div>
-                    <h3 className="text-[18px] font-semibold text-[var(--color-foreground)] flex items-center justify-between group-hover:text-[var(--color-primary)] transition-colors">
-                      Our Foundation
-                      <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </h3>
-                  </div>
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-secondary-text)] flex-shrink-0" />
-                </div>
-              </article>
-            </Link>
-
-            {/* Leaderboard Card - Mobile */}
-            <Link href="/leaderboard" className="block group">
-              <article className="relative bg-[var(--color-pure-white)] rounded-[20px] overflow-hidden border border-[var(--color-border)] hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center gap-4 p-5">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-primary)] flex-shrink-0" />
-                  <div className="relative w-16 h-16 rounded-[12px] overflow-hidden flex-shrink-0 bg-gradient-to-br from-[var(--color-primary)] to-[#0052FF] flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-[14px] font-medium text-[var(--color-medium-gray)] flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                        </svg>
-                        Rankings
-                      </span>
-                    </div>
-                    <h3 className="text-[18px] font-semibold text-[var(--color-foreground)] flex items-center justify-between group-hover:text-[var(--color-primary)] transition-colors">
-                      Leaderboard
-                      <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </h3>
-                  </div>
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-primary)] flex-shrink-0" />
-                </div>
-              </article>
-            </Link>
           </div>
         </div>
       </div>
