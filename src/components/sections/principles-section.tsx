@@ -54,7 +54,7 @@ const PrinciplesSection = () => {
     <section className="bg-background py-16 sm:py-20 md:py-24 lg:py-28">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-x-16 items-center">
-          <div className="lg:col-span-5 flex flex-col items-start gap-8 sm:gap-10 lg:gap-12">
+          <div className="lg:col-span-5 flex flex-col items-start">
             <ul className="grid grid-cols-2 gap-3 sm:gap-4 w-full">
               {principlesData.map((item, index) =>
               <li key={index}>
@@ -88,33 +88,6 @@ const PrinciplesSection = () => {
                 </li>
               )}
             </ul>
-            <div className="flex flex-col gap-3 sm:gap-4 w-full">
-              <Link
-                href="/our-principles"
-                className="relative bg-gradient-to-r from-[var(--color-secondary-text)] to-[var(--color-charcoal)] text-[var(--color-pure-white)] rounded-[16px] px-8 sm:px-9 md:px-10 py-4 sm:py-5 md:py-6 text-lg sm:text-[19px] md:text-[20px] font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-center group overflow-hidden">
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  Our Foundation
-                  <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-black to-[var(--color-secondary-text)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </Link>
-              <Link
-                href="/leaderboard"
-                className="relative bg-gradient-to-r from-[var(--color-primary)] to-[#0052FF] text-[var(--color-pure-white)] rounded-[16px] px-8 sm:px-9 md:px-10 py-4 sm:py-5 md:py-6 text-lg sm:text-[19px] md:text-[20px] font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-center group overflow-hidden">
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                  </svg>
-                  Leaderboard
-                  <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#001A66] to-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </Link>
-            </div>
           </div>
 
           <div className="lg:col-span-7 relative">
@@ -231,9 +204,56 @@ const PrinciplesSection = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>);
 
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full max-w-4xl mx-auto mt-12 sm:mt-16 lg:mt-20">
+          <Link
+            href="/our-principles"
+            className="group relative flex-1 overflow-hidden rounded-2xl sm:rounded-3xl p-[2px] transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(45,45,45,0.5)]">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a] via-[#2D2D2D] to-[#1a1a1a] animate-gradient-x" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
+            <div className="relative bg-gradient-to-br from-[#2D2D2D] to-[#1a1a1a] rounded-2xl sm:rounded-3xl px-6 sm:px-8 md:px-10 py-5 sm:py-6 md:py-7 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-full opacity-30 group-hover:opacity-50 transition-opacity duration-500">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] bg-gradient-to-r from-transparent via-white/10 to-transparent rotate-45 group-hover:animate-spin-slow" />
+              </div>
+              <span className="relative z-10 flex items-center justify-center gap-3 text-white text-lg sm:text-xl md:text-2xl font-bold tracking-wide">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                Our Foundation
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+            </div>
+          </Link>
+
+          <Link
+            href="/leaderboard"
+            className="group relative flex-1 overflow-hidden rounded-2xl sm:rounded-3xl p-[2px] transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(0,82,255,0.6)]">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0046CC] via-[#0052FF] to-[#0046CC] animate-gradient-x" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer" />
+            </div>
+            <div className="relative bg-gradient-to-br from-[#0046CC] via-[#0052FF] to-[#003BA8] rounded-2xl sm:rounded-3xl px-6 sm:px-8 md:px-10 py-5 sm:py-6 md:py-7 overflow-hidden">
+              <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-500">
+                <div className="absolute top-0 left-0 w-32 h-32 bg-white/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-cyan-400/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+              </div>
+              <span className="relative z-10 flex items-center justify-center gap-3 text-white text-lg sm:text-xl md:text-2xl font-bold tracking-wide">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                </svg>
+                Leaderboard
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default PrinciplesSection;
