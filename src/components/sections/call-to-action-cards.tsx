@@ -7,10 +7,10 @@ const CallToActionCards = () => {
   return (
     <section className="bg-background py-20 lg:py-24">
       <div className="container">
-        <h2 className="text-4xl font-normal text-white mb-10">
+        <h2 className="text-4xl font-normal text-foreground mb-10">
           Why Partner With ADSMARKETFX
         </h2>
-        <p className="text-lg text-white max-w-3xl mb-12">
+        <p className="text-lg text-secondary-text max-w-3xl mb-12">
           Premium Traffic Guarantee. Weekly Payments. Dedicated Support. We deliver results that matter—backed by real partnerships, not just promises.
         </p>
 
