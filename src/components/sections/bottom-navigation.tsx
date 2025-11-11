@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { House, Briefcase, Users, Handshake, MessageCircle } from "lucide-react";
+import { House, Briefcase, Users, Handshake, MessageCircle, TrendingUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navItems = [
   { href: "/", label: "Home", icon: House },
   { href: "/services", label: "Services", icon: Briefcase },
   { href: "/about", label: "About", icon: Users },
+  { href: "/investor-relations", label: "Investors", icon: TrendingUp },
   { href: "/partners", label: "Partners", icon: Handshake },
   { href: "/contact", label: "Contact", icon: MessageCircle },
 ];
