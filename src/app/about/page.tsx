@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, TrendingUp, Users, Target, Zap, Award, Globe, BarChart3, Rocket, Heart } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function AboutPage() {
   const [activeValue, setActiveValue] = useState(0);
@@ -281,6 +282,87 @@ export default function AboutPage() {
                     </button>
                   );
                 })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Leadership Team */}
+        <section className="container mx-auto px-6 md:px-10 py-20 md:py-32">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16 space-y-4">
+              <div className="inline-block px-5 py-2 bg-primary/10 rounded-full">
+                <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+                  Leadership Team
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-medium leading-tight">
+                Meet Our Leaders
+              </h2>
+              <p className="text-xl text-secondary-text max-w-3xl mx-auto">
+                Experienced professionals driving innovation in performance marketing
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+              {/* CEO & Owner */}
+              <div className="group relative">
+                <div className="relative aspect-square rounded-3xl overflow-hidden mb-6 bg-gradient-to-br from-primary/5 to-teal-accent/5">
+                  <Image
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/ed5e5658-fe5c-4063-91df-3fb6b9391c78/generated_images/professional-business-headshot-portrait--c35250ea-20251111024622.jpg"
+                    alt="Chag Achim - CEO & Owner"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="text-center space-y-2">
+                  <h3 className="text-2xl md:text-3xl font-semibold">Chag Achim</h3>
+                  <p className="text-primary font-medium text-lg">CEO & Owner</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Visionary leader with 15+ years in performance marketing and fintech innovation
+                  </p>
+                </div>
+              </div>
+
+              {/* CMO */}
+              <div className="group relative">
+                <div className="relative aspect-square rounded-3xl overflow-hidden mb-6 bg-gradient-to-br from-teal-accent/5 to-forest-green/5">
+                  <Image
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/ed5e5658-fe5c-4063-91df-3fb6b9391c78/generated_images/professional-business-headshot-portrait--134a7749-20251111024624.jpg"
+                    alt="Isaac - Chief Marketing Officer"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="text-center space-y-2">
+                  <h3 className="text-2xl md:text-3xl font-semibold">Isaac</h3>
+                  <p className="text-teal-accent font-medium text-lg">Chief Marketing Officer</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Strategic marketing expert specializing in growth and brand positioning
+                  </p>
+                </div>
+              </div>
+
+              {/* CTO */}
+              <div className="group relative">
+                <div className="relative aspect-square rounded-3xl overflow-hidden mb-6 bg-gradient-to-br from-terracotta/5 to-olive-green/5">
+                  <Image
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/ed5e5658-fe5c-4063-91df-3fb6b9391c78/generated_images/professional-business-headshot-portrait--54faff9a-20251111024622.jpg"
+                    alt="Ethan Cole - Chief Technology Officer"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-terracotta/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="text-center space-y-2">
+                  <h3 className="text-2xl md:text-3xl font-semibold">Ethan Cole</h3>
+                  <p className="text-terracotta font-medium text-lg">Chief Technology Officer</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Technology innovator building scalable solutions for performance marketing
+                  </p>
+                </div>
               </div>
             </div>
           </div>
