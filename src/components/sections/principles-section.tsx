@@ -65,9 +65,9 @@ const PrinciplesSection = () => {
                     color: '#FFFFFF'
                   } : {}}
                   className={`
-                      w-full text-left px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 
-                      text-[18px] sm:text-[20px] md:text-[22px] font-medium 
-                      rounded-full transition-all duration-300 
+                      w-full text-left px-4 sm:px-6 md:px-7 lg:px-8 py-3 sm:py-3.5 md:py-4 
+                      text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-medium 
+                      rounded-full transition-all duration-300 truncate
                       ${selectedIndex === index ?
                   'shadow-lg scale-105' :
                   'bg-[var(--color-pure-white)] text-[var(--color-secondary-text)] hover:bg-[var(--color-secondary)] hover:scale-102 border border-[var(--color-border)]'}
@@ -128,13 +128,13 @@ const PrinciplesSection = () => {
                   }}
                   className="relative block p-6 sm:p-8 md:p-10 text-[var(--color-pure-white)] rounded-[20px] sm:rounded-[24px] min-h-[360px] sm:min-h-[400px] md:min-h-[440px] lg:min-h-0 lg:aspect-[3/2] overflow-hidden">
 
-                  <div className="relative z-10 flex flex-col justify-between h-full">
+                  <div className="relative z-10 flex flex-col justify-between h-full pr-[45%] sm:pr-[40%]">
                     <div>
                       <motion.h4
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
-                        className="font-medium text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] leading-snug mb-4 sm:mb-6">
+                        className="font-medium text-[22px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] leading-snug mb-3 sm:mb-4 md:mb-6 break-words">
 
                         {selectedPrinciple.heading}
                       </motion.h4>
@@ -142,7 +142,7 @@ const PrinciplesSection = () => {
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.5 }}
-                        className="text-[16px] sm:text-[17px] md:text-[18px] leading-relaxed max-w-[40ch] opacity-95">
+                        className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] leading-relaxed opacity-95 line-clamp-6">
 
                         {selectedPrinciple.description}
                       </motion.p>

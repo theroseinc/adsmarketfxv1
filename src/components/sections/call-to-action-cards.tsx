@@ -23,7 +23,7 @@ const CallToActionCards = () => {
             >
               <div className="absolute inset-0 bg-[#B76E4E]" style={{ transformStyle: 'preserve-3d' }}></div>
               
-              <h3 className="relative z-10 text-4xl font-medium leading-tight max-w-sm text-white">
+              <h3 className="relative z-10 text-3xl sm:text-4xl font-medium leading-tight max-w-sm text-white pr-4">
                 Rigorous Vetting Process – Only the best affiliates make it through
               </h3>
 
@@ -51,11 +51,11 @@ const CallToActionCards = () => {
             <div style={{ perspective: '1200px' }}>
               <Link
                 href="/partners"
-                className="group relative flex flex-col justify-between p-10 bg-[#00594D] rounded-[2rem] flex-1 overflow-hidden block"
+                className="group relative flex flex-col justify-between p-8 sm:p-10 bg-[#00594D] rounded-[2rem] flex-1 overflow-hidden block min-h-[280px]"
               >
                 <div className="absolute inset-0 bg-[#00594D]" style={{ transformStyle: 'preserve-3d' }}></div>
                 
-                <h3 className="relative z-20 text-4xl font-medium leading-tight max-w-sm text-white">
+                <h3 className="relative z-20 text-3xl sm:text-4xl font-medium leading-tight max-w-sm text-white pr-4">
                   Maximum ROI Focus – Every campaign optimized for peak performance
                 </h3>
 
@@ -81,11 +81,11 @@ const CallToActionCards = () => {
             <div style={{ perspective: '1200px' }}>
               <Link
                 href="/services"
-                className="group relative flex flex-col justify-between p-10 bg-[#6B7856] rounded-[2rem] flex-1 overflow-hidden block"
+                className="group relative flex flex-col justify-between p-8 sm:p-10 bg-[#6B7856] rounded-[2rem] flex-1 overflow-hidden block min-h-[280px]"
               >
                 <div className="absolute inset-0 bg-[#6B7856]" style={{ transformStyle: 'preserve-3d' }}></div>
                 
-                <h3 className="relative z-20 text-4xl font-medium leading-tight max-w-sm text-white">
+                <h3 className="relative z-20 text-3xl sm:text-4xl font-medium leading-tight max-w-sm text-white pr-4">
                   Real-Time Analytics &amp; Dedicated Support – Track performance 24/7
                 </h3>
 

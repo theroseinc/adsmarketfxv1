@@ -22,22 +22,22 @@ const FeaturedArticle = () => {
             </div>
 
             {/* Right Column: Text Card */}
-            <div className="w-full lg:w-[420px] xl:w-[496px] lg:flex-shrink-0 bg-[#F0F4F9] rounded-[20px] sm:rounded-[24px] md:rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col justify-between">
-              <div>
-                <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 border border-black rounded-full text-xs sm:text-[13px] md:text-[14px] font-medium tracking-wider uppercase">
+            <div className="w-full lg:w-[420px] xl:w-[496px] lg:flex-shrink-0 bg-[#F0F4F9] rounded-[20px] sm:rounded-[24px] md:rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col justify-between overflow-hidden">
+              <div className="overflow-hidden">
+                <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 border border-black rounded-full text-xs sm:text-[13px] md:text-[14px] font-medium tracking-wider uppercase whitespace-nowrap">
                   Industry Insights
                 </span>
-                <h4 className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] font-medium mt-3 sm:mt-4 mb-4 sm:mb-5 md:mb-6 leading-snug text-foreground">
+                <h4 className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] font-medium mt-3 sm:mt-4 mb-4 sm:mb-5 md:mb-6 leading-snug text-foreground break-words">
                   The Performance Marketing Revolution: Why Winners Are Ditching Traditional Ads
                 </h4>
-                <p className="text-base sm:text-[17px] md:text-[18px] text-[#2D2D2D] leading-relaxed">
+                <p className="text-base sm:text-[17px] md:text-[18px] text-[#2D2D2D] leading-relaxed line-clamp-4 sm:line-clamp-5">
                   Smart advertisers are abandoning wasteful brand budgets for performance-based models. With AI-driven attribution and real-time optimization, CPA campaigns now deliver 300% better ROI than legacy media. The question isn't whether to pivot—it's whether you'll be late to the party.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mt-6 sm:mt-8">
                 {/* Carousel Dots */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-shrink-0">
                   <button
                     aria-label="View slide 1"
                     className="bg-primary h-2 w-5 sm:w-6 rounded-full"
@@ -57,11 +57,11 @@ const FeaturedArticle = () => {
                 </div>
 
                 {/* Read More Link */}
-                <Link href="#" className="flex items-center gap-3 sm:gap-4 group">
-                  <span className="text-base sm:text-[17px] md:text-[18px] font-medium text-foreground group-hover:text-primary transition-colors">
+                <Link href="#" className="flex items-center gap-3 sm:gap-4 group flex-shrink-0">
+                  <span className="text-base sm:text-[17px] md:text-[18px] font-medium text-foreground group-hover:text-primary transition-colors whitespace-nowrap">
                     Read more
                   </span>
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-black rounded-full flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-black rounded-full flex items-center justify-center group-hover:bg-primary transition-colors duration-300 flex-shrink-0">
                     <ArrowRight className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                 </Link>

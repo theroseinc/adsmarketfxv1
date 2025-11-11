@@ -108,20 +108,20 @@ const HeroSection = () => {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
                       className="object-cover opacity-50"
                     />
-                    <div className={`absolute inset-0 flex flex-col items-center justify-center p-4 transition-all duration-700 ${
+                    <div className={`absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 transition-all duration-700 overflow-hidden ${
                       hoveredCard === index ? 'opacity-100' : hoveredCard === null ? 'opacity-100' : 'opacity-0'
                     }`}>
                       <span className={`font-medium text-white drop-shadow-lg transition-all duration-700 ${
                         hoveredCard === index 
-                          ? 'text-[64px] sm:text-[72px] md:text-[80px]' 
-                          : 'text-[48px] sm:text-[56px] md:text-[64px]'
+                          ? 'text-[56px] sm:text-[64px] md:text-[72px]' 
+                          : 'text-[40px] sm:text-[48px] md:text-[56px]'
                       }`}>
                         {slide.stat}
                       </span>
-                      <p className={`text-white text-center leading-snug drop-shadow-md transition-all duration-700 ${
+                      <p className={`text-white text-center leading-tight drop-shadow-md transition-all duration-700 px-2 ${
                         hoveredCard === index 
-                          ? 'text-base sm:text-lg md:text-xl mt-3 opacity-100 max-w-[200px]' 
-                          : 'text-sm sm:text-base mt-2 opacity-80 max-w-[140px]'
+                          ? 'text-sm sm:text-base md:text-lg mt-2 sm:mt-3 opacity-100 max-w-[180px] sm:max-w-[200px]' 
+                          : 'text-xs sm:text-sm mt-1 sm:mt-2 opacity-80 max-w-[120px] sm:max-w-[140px]'
                       }`}>
                         {slide.text}
                       </p>
@@ -141,9 +141,9 @@ const HeroSection = () => {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
                   className="object-cover opacity-30"
                 />
-                <div className="relative z-10">
+                <div className="relative z-10 max-w-[85%]">
                   <h5 className="text-xl sm:text-2xl font-medium text-pure-white leading-tight">Marketing Intelligence</h5>
-                  <p className="text-white/80 text-xs sm:text-sm mt-2 leading-relaxed">Exclusive insights, case studies, and industry reports</p>
+                  <p className="text-white/80 text-xs sm:text-sm mt-2 leading-relaxed line-clamp-2">Exclusive insights, case studies, and industry reports</p>
                 </div>
                 <div className="relative z-10 self-end">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-full flex items-center justify-center transition-transform group-hover:scale-110 group-active:scale-95">
@@ -162,11 +162,11 @@ const HeroSection = () => {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
                 className="object-cover opacity-40"
               />
-              <div className="relative z-10">
+              <div className="relative z-10 max-w-[85%]">
                 <h5 className="text-lg sm:text-xl font-medium text-white leading-tight">
                   Join Our Network
                 </h5>
-                <p className="text-white/90 text-xs sm:text-sm mt-2 leading-relaxed">
+                <p className="text-white/90 text-xs sm:text-sm mt-2 leading-relaxed line-clamp-2">
                   Exclusive invite for advertisers and publishers to register
                 </p>
               </div>

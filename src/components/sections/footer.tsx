@@ -1,148 +1,136 @@
 import Link from 'next/link';
-import { Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
-import Image from 'next/image';
+import { Instagram, Facebook, Linkedin } from 'lucide-react';
 
-const AdsMarketFXLogoWhite = () =>
-<div className="flex items-center gap-3">
-    <div className="relative h-12 w-12 sm:h-14 sm:w-14 flex items-center justify-center flex-shrink-0">
-      <Image
-      alt="AdsMarket FX Logo"
-      width={56}
-      height={56}
-      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/photo_2025-02-22_06-44-15-2-1760616885888.jpg"
-      className="rounded-full object-cover" />
+export default function Footer() {
+  const navLinks = [
+    { name: 'Services', href: '/services' },
+    { name: 'Our Principles', href: '/our-principles' },
+    { name: 'About', href: '/about' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Contact', href: '/contact' },
+  ];
 
-    </div>
-    <span className="text-2xl sm:text-3xl font-medium text-pure-white">AdsMarket FX</span>
-  </div>;
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms and Conditions', href: '/terms-and-conditions' },
+  ];
 
-
-const contactInfo = [
-{
-  title: 'General Inquiries',
-  email: 'info@adsmarketfx.com'
-},
-{
-  title: 'Affiliate Support',
-  email: "aff@adsmarketfx.com"
-},
-{
-  title: 'Advertiser Support',
-  email: "adv@adsmarketfx.com"
-},
-{
-  title: 'Partnership Opportunities',
-  email: 'partners@adsmarketfx.com'
-}];
-
-
-const navLinks = [
-{ name: 'Services', href: '/services' },
-{ name: 'Our Principles', href: '/our-principles' },
-{ name: 'About', href: '/about' },
-{ name: 'Journal', href: '/community' },
-{ name: 'Contact', href: '/contact' }];
-
-
-const legalLinks = [
-{ name: 'Privacy Policy', href: '/privacy-policy' },
-{ name: 'Terms and Conditions', href: '/terms-and-conditions' }];
-
-
-const socialLinks = [
-{ name: 'Instagram', href: 'https://www.instagram.com/adsmarketfx/', icon: Instagram },
-{ name: 'Facebook', href: 'https://www.facebook.com/adsmarketfx', icon: Facebook },
-{ name: 'LinkedIn', href: 'https://www.linkedin.com/company/adsmarketfx', icon: Linkedin },
-{ name: 'Twitter', href: 'https://twitter.com/adsmarketfx', icon: Twitter }];
-
-
-
-const Footer = () => {
   return (
-    <footer className="bg-charcoal text-footer-text rounded-t-[24px] sm:rounded-t-[32px] overflow-hidden">
-      <div className="container pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-10 sm:gap-y-12 lg:gap-x-8">
+    <footer className="bg-[#2B2B2B] text-[#E5E5E5] pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-10 md:pb-12 rounded-t-[24px] sm:rounded-t-[32px] md:rounded-t-[40px]">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 mb-12 sm:mb-16 md:mb-20">
           
-          <div className="lg:col-span-4">
-            <p className="text-base sm:text-lg leading-relaxed text-gray-500">
-              ADSMarketFX is an invite-only performance marketing network connecting elite affiliates with high-converting crypto and forex offers. We deliver transparency, premium support, and consistent ROI, because we are;
-            </p>
-            <p className="text-3xl sm:text-5xl font-display font-medium leading-tight text-pure-white mt-6">
-              Built for Results. Designed for Scale.
+          {/* Column 1: Acknowledgment */}
+          <div className="lg:col-span-3">
+            <p className="text-xs sm:text-sm leading-relaxed text-gray-400 break-words">
+              We acknowledge the Traditional Custodians of the lands on which we work, the Boon Wurrung and Wurundjeri peoples of the Kulin Nation, and pay our respects to their Elders past, present and emerging.
             </p>
           </div>
           
+          {/* Column 2: Contact Addresses */}
           <div className="lg:col-span-4">
-            <h3 className="text-xl font-medium text-pure-white mb-6">Contact Us</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 text-sm sm:text-base">
-              {contactInfo.map((contact, index) =>
-              <div key={index} className="space-y-2">
-                  <p className="font-medium text-gray-300 text-sm">{contact.title}</p>
-                  <a 
-                    href={`mailto:${contact.email}`} 
-                    className="text-gray-400 hover:text-pure-white transition-colors block break-all"
-                  >
-                    {contact.email}
-                  </a>
-                </div>
-              )}
+            <div className="space-y-4 sm:space-y-6">
+              <div className="overflow-hidden">
+                <h4 className="text-sm sm:text-base font-medium text-pure-white mb-2 truncate">AdsMarket FX Headquarters</h4>
+                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed break-words">
+                  Level 5, 123 Marketing Street<br />
+                  Sydney, NSW 2000, Australia<br />
+                  <a href="tel:+61299998888" className="hover:text-pure-white transition-colors">+61 2 9999 8888</a>
+                </p>
+              </div>
+              
+              <div className="overflow-hidden">
+                <h4 className="text-sm sm:text-base font-medium text-pure-white mb-2 truncate">AdsMarket FX Europe</h4>
+                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed break-words">
+                  10 Performance Drive<br />
+                  London, EC2A 4BX, United Kingdom<br />
+                  <a href="tel:+442079460000" className="hover:text-pure-white transition-colors">+44 20 7946 0000</a>
+                </p>
+              </div>
             </div>
           </div>
           
+          {/* Column 3: Navigation Links */}
           <div className="lg:col-span-2">
-            <ul className="space-y-2 sm:space-y-3">
+            <ul className="space-y-2 sm:space-y-3 overflow-hidden">
               {navLinks.map((link) =>
               <li key={link.name}>
-                  <Link href={link.href} className="text-xs sm:text-sm text-gray-500 hover:text-pure-white transition-colors">
+                  <Link href={link.href} className="text-xs sm:text-sm text-gray-500 hover:text-pure-white transition-colors break-words line-clamp-1">
                     {link.name}
                   </Link>
                 </li>
               )}
             </ul>
           </div>
-
-          <div className="lg:col-span-2 flex flex-col justify-between gap-6 sm:gap-0">
-            <ul className="space-y-2 sm:space-y-3">
+          
+          {/* Column 4: Legal Links */}
+          <div className="lg:col-span-3">
+            <ul className="space-y-2 sm:space-y-3 overflow-hidden">
               {legalLinks.map((link) =>
               <li key={link.name}>
-                  <Link href={link.href} className="text-sm sm:text-base text-gray-400 hover:text-pure-white transition-colors">
+                  <Link href={link.href} className="text-xs sm:text-sm text-gray-500 hover:text-pure-white transition-colors break-words line-clamp-1">
                     {link.name}
                   </Link>
                 </li>
               )}
             </ul>
-            <p className="text-sm sm:text-base text-gray-400">&copy; 2025 ADSMarketFX</p>
+            
+            <p className="text-xs text-gray-500 mt-6 sm:mt-8 break-words">
+              Website by{' '}
+              <span className="text-gray-400 hover:text-pure-white transition-colors cursor-pointer">
+                Your Creative
+              </span>
+            </p>
           </div>
         </div>
-
-        <div className="mt-16 sm:mt-20 pt-6 sm:pt-8 border-t border-[#4A4A4A] flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
-          <div className="text-center md:text-left order-3 md:order-1">
-            <p className="text-xs sm:text-sm text-gray-400">Performance Marketing Network</p>
-            <p className="text-base sm:text-lg text-pure-white font-medium">Innovative Finance. Intelligent Marketing.</p>
+        
+        {/* Bottom Row: Logo, Social, Copyright */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-8 pt-8 sm:pt-10 border-t border-gray-700">
+          
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-xl sm:text-2xl font-bold text-pure-white hover:text-gray-300 transition-colors whitespace-nowrap">
+              ADSMARKETFX
+            </Link>
           </div>
           
-          <div className="order-1 md:order-2">
-            <AdsMarketFXLogoWhite />
+          {/* Social Icons */}
+          <div className="flex items-center gap-4 sm:gap-5">
+            <a 
+              href="https://instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Instagram"
+              className="hover:text-pure-white transition-colors flex-shrink-0"
+            >
+              <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
+            </a>
+            <a 
+              href="https://facebook.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Facebook"
+              className="hover:text-pure-white transition-colors flex-shrink-0"
+            >
+              <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
+            </a>
+            <a 
+              href="https://linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="LinkedIn"
+              className="hover:text-pure-white transition-colors flex-shrink-0"
+            >
+              <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
+            </a>
           </div>
           
-          <div className="order-2 md:order-3 flex items-center gap-x-3 sm:gap-x-4">
-            {socialLinks.map((social) =>
-            <a
-              key={social.name}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.name}
-              className="text-gray-400 hover:text-pure-white transition-colors p-2 -m-2">
-
-                <social.icon className="h-5 w-5 sm:h-6 sm:w-6" />
-              </a>
-            )}
+          {/* Copyright */}
+          <div className="text-xs sm:text-sm text-gray-500 whitespace-nowrap">
+            © 2025 ADSMARKETFX
           </div>
         </div>
       </div>
-    </footer>);
-
-};
-
-export default Footer;
+    </footer>
+  );
+}

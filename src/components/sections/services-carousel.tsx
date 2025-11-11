@@ -180,7 +180,7 @@ export default function ServicesCarousel() {
             className="absolute left-0 top-0 w-full max-w-[280px] h-[210px] sm:max-w-[320px] sm:h-[240px] md:max-w-[380px] md:h-[280px] lg:max-w-[440px] lg:h-[320px] xl:max-w-[480px] xl:h-[340px] rounded-[18px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] overflow-hidden transition-all duration-[600ms] ease-in-out cursor-pointer">
 
               <div
-              className="w-full h-full p-5 sm:p-6 md:p-8 lg:p-9 xl:p-10 flex flex-col justify-between relative text-white transition-transform duration-300 hover:scale-[1.02]"
+              className="w-full h-full p-5 sm:p-6 md:p-8 lg:p-9 xl:p-10 flex flex-col justify-between relative text-white transition-transform duration-300 hover:scale-[1.02] overflow-hidden"
               style={{ backgroundColor: service.color }}>
 
                 <div className="absolute top-0 right-0 w-[140px] h-[140px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] lg:w-[240px] lg:h-[240px] xl:w-[280px] xl:h-[280px] rounded-bl-full rounded-tr-[18px] sm:rounded-tr-[20px] md:rounded-tr-[24px] lg:rounded-tr-[28px] overflow-hidden">
@@ -198,18 +198,18 @@ export default function ServicesCarousel() {
                   style={{ backgroundColor: service.color }} />
 
                 </div>
-                <div className="relative z-10 w-full sm:w-3/5 md:w-3/5">
-                  <h4 className="text-[20px] sm:text-[22px] md:text-[26px] lg:text-[28px] xl:text-[32px] font-semibold leading-tight mb-1 sm:mb-2">
+                <div className="relative z-10 w-full sm:w-3/5 md:w-3/5 pr-2 overflow-hidden">
+                  <h4 className="text-[20px] sm:text-[22px] md:text-[26px] lg:text-[28px] xl:text-[32px] font-semibold leading-tight mb-1 sm:mb-2 truncate">
                     {service.title}
                   </h4>
-                  <p className="text-[11px] sm:text-xs md:text-sm opacity-80">{service.description}</p>
+                  <p className="text-[11px] sm:text-xs md:text-sm opacity-80 line-clamp-2">{service.description}</p>
                 </div>
                 <Link
                 href={service.href}
-                className="relative z-10 flex items-center justify-between cursor-pointer group">
+                className="relative z-10 flex items-center justify-between cursor-pointer group overflow-hidden">
 
-                  <span className="text-sm sm:text-base md:text-lg" style={{ color: service.color }}>Learn More</span>
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                  <span className="text-sm sm:text-base md:text-lg whitespace-nowrap" style={{ color: service.color }}>Learn More</span>
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-black rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105 flex-shrink-0">
                     <svg width="12" height="12" viewBox="0 0 15 14" fill="none" className="sm:w-[14px] sm:h-[13px] md:w-[15px] md:h-[14px]">
                       <path
                       d="M1.38672 12.5L13.6133 1.5M13.6133 1.5V11.1M13.6133 1.5H3.01328"
