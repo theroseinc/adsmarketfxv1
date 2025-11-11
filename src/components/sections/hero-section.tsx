@@ -111,14 +111,14 @@ const HeroSection = () => {
                     <div className={`absolute inset-0 flex flex-col items-center justify-center p-4 transition-all duration-700 ${
                       hoveredCard === index ? 'opacity-100' : hoveredCard === null ? 'opacity-100' : 'opacity-0'
                     }`}>
-                      <span className={`font-medium text-hero-stat-text drop-shadow-lg transition-all duration-700 ${
+                      <span className={`font-medium text-white drop-shadow-lg transition-all duration-700 ${
                         hoveredCard === index 
                           ? 'text-[64px] sm:text-[72px] md:text-[80px]' 
                           : 'text-[48px] sm:text-[56px] md:text-[64px]'
                       }`}>
                         {slide.stat}
                       </span>
-                      <p className={`text-hero-stat-text text-center leading-snug drop-shadow-md transition-all duration-700 ${
+                      <p className={`text-white text-center leading-snug drop-shadow-md transition-all duration-700 ${
                         hoveredCard === index 
                           ? 'text-base sm:text-lg md:text-xl mt-3 opacity-100 max-w-[200px]' 
                           : 'text-sm sm:text-base mt-2 opacity-80 max-w-[140px]'

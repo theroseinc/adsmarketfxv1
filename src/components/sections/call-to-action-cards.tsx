@@ -7,7 +7,7 @@ const CallToActionCards = () => {
   return (
     <section className="bg-background py-20 lg:py-24">
       <div className="container">
-        <h2 className="text-4xl font-normal text-foreground mb-10">
+        <h2 className="text-4xl font-normal text-primary mb-10">
           Why Partner With ADSMARKETFX
         </h2>
         <p className="text-lg text-secondary-text max-w-3xl mb-12">
