@@ -75,8 +75,8 @@ export default function Footer() {
               )}
             </ul>
             
-            <p className="text-xs text-gray-500 mt-6 sm:mt-8 break-words !w-full !h-4">
-              Website by{' '}
+            <p className="text-xs text-gray-500 mt-6 sm:mt-8 break-words !w-full !h-4 !whitespace-pre-line">
+              {' '}
               <span className="text-gray-400 hover:text-pure-white transition-colors cursor-pointer !whitespace-pre-line">
 
               </span>
