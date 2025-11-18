@@ -3,17 +3,17 @@ import { Instagram, Facebook, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   const navLinks = [
-    { name: 'Services', href: '/services' },
-    { name: 'Our Principles', href: '/our-principles' },
-    { name: 'About', href: '/about' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Contact', href: '/contact' },
-  ];
+  { name: 'Services', href: '/services' },
+  { name: 'Our Principles', href: '/our-principles' },
+  { name: 'About', href: '/about' },
+  { name: 'Resources', href: '/resources' },
+  { name: 'Contact', href: '/contact' }];
+
 
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy-policy' },
-    { name: 'Terms and Conditions', href: '/terms-and-conditions' },
-  ];
+  { name: 'Privacy Policy', href: '/privacy-policy' },
+  { name: 'Terms and Conditions', href: '/terms-and-conditions' }];
+
 
   return (
     <footer className="bg-[#2B2B2B] text-[#E5E5E5] pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-10 md:pb-12 rounded-t-[24px] sm:rounded-t-[32px] md:rounded-t-[40px]">
@@ -75,10 +75,10 @@ export default function Footer() {
               )}
             </ul>
             
-            <p className="text-xs text-gray-500 mt-6 sm:mt-8 break-words">
+            <p className="text-xs text-gray-500 mt-6 sm:mt-8 break-words !w-full !h-4">
               Website by{' '}
-              <span className="text-gray-400 hover:text-pure-white transition-colors cursor-pointer">
-                Your Creative
+              <span className="text-gray-400 hover:text-pure-white transition-colors cursor-pointer !whitespace-pre-line">
+
               </span>
             </p>
           </div>
@@ -96,31 +96,31 @@ export default function Footer() {
           
           {/* Social Icons */}
           <div className="flex items-center gap-4 sm:gap-5">
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
-              className="hover:text-pure-white transition-colors flex-shrink-0"
-            >
+              className="hover:text-pure-white transition-colors flex-shrink-0">
+
               <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
-              className="hover:text-pure-white transition-colors flex-shrink-0"
-            >
+              className="hover:text-pure-white transition-colors flex-shrink-0">
+
               <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="hover:text-pure-white transition-colors flex-shrink-0"
-            >
+              className="hover:text-pure-white transition-colors flex-shrink-0">
+
               <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
           </div>
@@ -131,6 +131,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 }
